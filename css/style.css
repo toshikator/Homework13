@@ -1,0 +1,13 @@
+body{
+    padding: 10vw;
+}
+.title{
+    font-weight: bolder;
+}
+.form-control {
+    display: inline-block;
+    width: 20vw;
+}
+span{
+    line-height: 40px;
+}
