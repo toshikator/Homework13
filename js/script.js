@@ -102,27 +102,28 @@ function addItem() {
     printArrayToSpan(arrayForSum, arrayItemsSpan);
 }
 
-function reverseNumber() {
-    function makeItNumber(data) {
-        if (typeof data === "number") {
-            return data;
-        } else if (typeof data === "string") {
-            if (isNumber(data)){
-                return +data;
-            }else{
-                alert('incorrect input');
-            }
-        } else if (typeof data === "object") {
-            if (isNumber(data.value)){
-                return +data.value;
-            }else{
-                alert('incorrect input');
-            }
+function makeItNumber(data) {
+    if (typeof data === "number") {
+        return data;
+    } else if (typeof data === "string") {
+        if (isNumber(data)){
+            return +data;
+        }else{
+            alert('incorrect input');
         }
-         else{
-             alert('unknown input type');
+    } else if (typeof data === "object") {
+        if (isNumber(data.value)){
+            return +data.value;
+        }else{
+            alert('incorrect input');
         }
     }
+    else{
+        alert('unknown input type');
+    }
+}
+
+function reverseNumber() {
     const testNumber = makeItNumber(numberForReverse);
     let test = testNumber.toString();
     let test2 = '';
