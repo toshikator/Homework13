@@ -130,5 +130,26 @@ function reverseNumber() {
     for (const testElement of test) {
         test2 = testElement + test2;
     }
-    reverseResultSpan.textContent = makeItNumber(test2);
+    reverseResultSpan.textContent = makeItNumber(test2) + ', and second variation = ' + reverseV2();
+
+}
+
+function reverseV2() {
+    const startData =  numberForReverse.value;
+    let dataTemp = startData;
+    let reversedData = 0;
+    console.log(startData);
+    for (let i=0; i<startData.toString().length; i++){
+        reversedData = (reversedData*10) + (dataTemp%10);
+        dataTemp = (dataTemp - dataTemp%10)/10;
+    }
+    return reversedData;
+
+
+    // document.getElementById('reverse_result').outerHTML =
+    //     `<br><br> <p style="position: absolute; width: 30vw%; height: 100%; background-color: indianred"><span>Reverse number version 2 = </span><span style="color: antiquewhite; font-size: 2em">${reversedData}</span></p>`;
+
+    // document.getElementById('reverse_result').outerHTML =
+    //     `<p style="width: 100%; height: 100%; background-color: indianred">
+    //     <span>Reverse number version 2 = </span><span style="color: antiquewhite; font-size: 2em">${reversedData}</span></p>`;
 }
